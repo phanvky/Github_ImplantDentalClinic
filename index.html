@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <!-- navbar -->
+    <div class="navbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link">
+                    <i class="fas fa-bars" onclick="collapseSidebar()"></i>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <img src="./assets/img/Logodental.png" alt="" class="logo">
+                <img src="./assets/img/chulogo.png" alt="" class="title-logo">
+            </li>
+        </ul>
+
+        <ul class="navbar-nav nav-right">
+            <li class="nav-item">
+                <a href="" class="nav-link">
+                    <i class="fas fa-bell"></i>
+                </a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link">
+                    <i class="fas fa-user dropdown-toggle"  data-toggle="user-menu"></i>
+                </a>
+
+                <ul id="user-menu" class="dropdown-menu">
+                    <li class="dropdown-menu-item">
+                        <a href="" class="dropdown-menu-link">
+                            <div>
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <span>Thông tin cá nhân</span>
+                        </a>
+                    </li>
+
+					<li  class="dropdown-menu-item">
+						<a href="#" class="dropdown-menu-link">
+							<div>
+								<i class="fas fa-sign-out-alt"></i>
+							</div>
+							<span>Đăng xuất</span>
+						</a>
+					</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- End navbar -->
+
+    <!-- sidebar -->
+    <div class="sidebar">
+        <ul class="sidebar-nav">
+            <li class="sidebar-nav-item">
+                <a href="#" class="sidebar-nav-link">
+                    <div>
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <span>Trang chủ</span>
+                </a>
+            </li>
+
+            <li class="sidebar-nav-item">
+                <a href="" class="sidebar-nav-link active">
+                    <div>
+                        <i class="fas fa-pen-square"></i>
+                    </div>
+                    <span>Đăng ký khám</span>
+                </a>
+            </li>
+
+            <li class="sidebar-nav-item">
+                <a href="" class="sidebar-nav-link">
+                    <div>
+                        <i class="fas fa-file-medical"></i>
+                    </div>
+                    <span>Khám bệnh</span>
+                </a>
+            </li>
+
+            <li class="sidebar-nav-item">
+                <a href="" class="sidebar-nav-link">
+                    <div>
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <span>Lịch hẹn</span>
+                </a>
+            </li>
+
+            <li class="sidebar-nav-item">
+                <a href="" class="sidebar-nav-link">
+                    <div>
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <span>Lịch làm việc</span>
+                </a>
+            </li>
+
+            <li class="sidebar-nav-item">
+                <a href="" class="sidebar-nav-link">
+                    <div>
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <span>Trạng thái tư vấn</span>
+                </a>
+            </li>
+
+            <li class="sidebar-nav-item">
+                <a href="" class="sidebar-nav-link">
+                    <div>
+                        <i class="fas fa-money-check-alt"></i>
+                    </div>
+                    <span>Thanh toán</span>
+                </a>
+            </li>
+
+            <li class="sidebar-nav-item">
+                <a href="" class="sidebar-nav-link">
+                    <div>
+                        
+                    </div>
+                    <span></span>
+                </a>
+            </li>
+
+            <li class="sidebar-nav-item">
+                <a href="" class="sidebar-nav-link">
+                    <div>
+                        <i class="fas fa-power-off"></i>
+                    </div>
+                    <span>Thoát</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- End sidebar -->
+
+    <!-- main content -->
+    <div class="wrapper">
+        <div class="tabs">
+            <ul>
+                <li class="active">
+                    <span class="icon"></span>
+                    <span class="text">Thông tin bệnh nhân</span>
+                </li>
+
+                <li>
+                    <span class="icon"></span>
+                    <span class="text">Đăng ký khám</span>
+                </li>
+
+                <li>
+                    <span class="icon"></span>
+                    <span class="text">Danh sách đăng ký khám</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="tab-wrap" style="display: block;">
+                <div class="title">
+                    Thông tin bệnh nhân
+                </div>
+                <div class="tab-content">
+                    <div class="container">
+                        <p>Mã hồ sơ</p>
+                        <select name="" id="cusSelectbox">
+                            <option value="hs1">1504070003|Nguyễn Anh|2015</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-wrap" style="display: none;">
+                <div class="title">
+                    Đăng ký khám
+                </div>
+                <div class="tab-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem inventore perspiciatis alias, magni provident nulla recusandae odio consequatur praesentium officia non voluptate voluptatum debitis consequuntur omnis incidunt fuga eaque sit aliquam nemo. Recusandae voluptatibus excepturi, voluptates inventore nulla aliquid porro a asperiores beatae quas quo incidunt at, cumque minima officiis error eius dignissimos animi ullam unde odit! Nobis aut animi quibusdam molestias libero, facere vel cum atque incidunt esse! Libero ipsam praesentium sit, enim corrupti quia nobis obcaecati nostrum voluptatem totam nulla delectus ipsa facilis optio quis iure unde repudiandae voluptas temporibus, ad veritatis dolorem, culpa maiores. Dicta, quod neque.</p>
+                </div>
+            </div>
+
+            <div class="tab-wrap" style="display: none;">
+                <div class="title">
+                    Danh sách đăng ký khám
+                </div>
+                <div class="tab-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem inventore perspiciatis alias, magni provident nulla recusandae odio consequatur praesentium officia non voluptate voluptatum debitis consequuntur omnis incidunt fuga eaque sit aliquam nemo. Recusandae voluptatibus excepturi, voluptates inventore nulla aliquid porro a asperiores beatae quas quo incidunt at, cumque minima officiis error eius dignissimos animi ullam unde odit! Nobis aut animi quibusdam molestias libero, facere vel cum atque incidunt esse! Libero ipsam praesentium sit, enim corrupti quia nobis obcaecati nostrum voluptatem totam nulla delectus ipsa facilis optio quis iure unde repudiandae voluptas temporibus, ad veritatis dolorem, culpa maiores. Dicta, quod neque.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- End main content -->
+    
+
+    <script src="./assets/js/index.js"></script>
+</body>
+</html>
